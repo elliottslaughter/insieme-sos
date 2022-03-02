@@ -16,10 +16,6 @@ task main()
 end
 
 local root_dir = arg[0]:match(".*/") or "./"
-local part1 = terralib.includec("part1.h", {"-I", root_dir})
-local part2 = terralib.includec("part2.h", {"-I", root_dir})
-terra loader()
-  part1.part1_h_register()
-  part2.part2_h_register()
-end
-regentlib.saveobj(main, "main", nil, loader, {"part1.o", "part2.o"})
+local main_h = root_dir .. "main.h"
+local main_o = root_dir .. "main.o"
+regentlib.save_tasks(main_h, main_o, nil, nil, nil, nil, false)
