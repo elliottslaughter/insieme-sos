@@ -1,7 +1,6 @@
 import "regent"
 
 local data = require("common/data")
-local format = require("std/format")
 
 require("main_header")
 
