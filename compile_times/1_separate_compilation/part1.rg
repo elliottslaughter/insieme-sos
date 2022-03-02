@@ -13,5 +13,5 @@ end
 
 local root_dir = arg[0]:match(".*/") or "./"
 local part1_h = root_dir .. "part1.h"
-local part1_so = root_dir .. "libpart1.so"
-regentlib.save_tasks(part1_h, part1_so, nil, nil, nil, nil, false)
+local part1_o = root_dir .. "part1.o"
+regentlib.save_tasks(part1_h, part1_o, nil, nil, nil, nil, false)
