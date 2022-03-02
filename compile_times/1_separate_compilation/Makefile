@@ -11,4 +11,4 @@ main: main.rg $(HEADERS) $(OBJS)
 
 .PHONY: clean
 clean:
-	rm -f *.so *.h
+	rm -f *.so *.h main
